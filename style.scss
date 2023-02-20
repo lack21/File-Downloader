@@ -1,0 +1,123 @@
+// lear
+// File Downloader
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: #5583f1;
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+}
+
+// Main
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: min(450px, 90vw);
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 0 1rem #4488ff;
+  z-index: 2;
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .sub-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .url-input {
+    padding: 1rem;
+    outline: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid #aaa;
+  }
+
+  .download-btn {
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: #5583f1;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    &:hover {
+      background-color: #5599ff;
+    }
+  }
+}
+
+// Cards
+.card {
+  display: grid;
+  place-content: center;
+  position: absolute;
+  bottom: 6rem;
+  left: 5%;
+  width: 80px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  animation: rotatation 10s infinite linear;
+  -webkit-animation: rotatation 10s infinite linear;
+
+  @keyframes rotatation {
+    to {
+      transform: rotate(720deg);
+      -webkit-transform: rotate(720deg);
+      -moz-transform: rotate(720deg);
+      -ms-transform: rotate(720deg);
+      -o-transform: rotate(720deg);
+    }
+  }
+
+  img {
+    width: 32px;
+  }
+
+  &:nth-of-type(2) {
+    top: 6rem;
+    left: 15%;
+  }
+
+  &:nth-of-type(3) {
+    top: 10rem;
+    left: 85%;
+  }
+
+  &:nth-of-type(4) {
+    bottom: 8rem;
+    left: 75%;
+  }
+}
